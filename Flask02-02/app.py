@@ -1,10 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/title/<title>')
-def title(title):
-    return render_template("index.html", title=title)
+@app.route('/search')
+def search():
+    q = request.args.get('q','')
+    return q
 
 
 if __name__ == "__main__":
