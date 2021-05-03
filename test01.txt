@@ -1,11 +1,1 @@
-test01
-<<<<<<< HEAD
-10月を追加
-=======
-test02
-<<<<<<< HEAD
-追加①
-追加③
-=======
->>>>>>> d0f8b5a8395dcc37924d6d74b60d9a9354fea7b1
->>>>>>> 03fd133400b57ca9149cc32abe0cda853c606cf2
+pull request -> reset
