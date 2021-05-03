@@ -1,6 +1,1 @@
-<<<<<<< HEAD
 feature02
-=======
-test01
-hogehoge
->>>>>>> e0cc2e53ccbce8283b437b17e563d14447f3a163
