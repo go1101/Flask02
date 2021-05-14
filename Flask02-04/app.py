@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
@@ -21,8 +22,10 @@ def render_upload_form():
 def upload_file():
     if request.form['name'] and request.files['image']:
         f = request.files['image']
-        f.save('static/hoge.png')
-        return render_template('result.html', name=request.form['name'])
+        # ファイル名を修正
+        filepath = 'static/' + secure_filename(f.filename)
+        f.save('filepath')
+        return render_template('result.html', name=request.form['name'], image_url=filepath)
 
 if __name__ == '__main__':
     app.run(debug=True)
