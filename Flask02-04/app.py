@@ -8,7 +8,7 @@ def render_form():
 
 @app.route('/login', methods=['POST'])
 def login():
-    if　request.form['username'] and request.form['email']:
+    if request.form['username'] and request.form['email']:
         return render_template('check.html', email=request.form['email'], username=request.form['username'])
     else:
         return render_template('error.html')
@@ -23,4 +23,7 @@ def upload_file():
         f = request.files['image']
         f.save('static/hoge.png')
         return render_template('result.html', name=request.form['name'])
-        
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
